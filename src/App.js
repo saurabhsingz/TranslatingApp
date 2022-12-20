@@ -55,23 +55,23 @@ function App() {
     setlangkey(e.target.value)
   }
   return (
-    <div class="container">
+    <div className="container">
       <div className="row">
         <div className="col-md-12">
-          <h1 class="mt-3 position-relative font">⌨️ Translate</h1>
-          <div class="form-group shadow-textarea mt-4">
-            <textarea onChange={setinputarea} class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="5" placeholder="Enter the Text you want to Translate..."></textarea>
+          <h1 className="mt-3 position-relative font">⌨️ Translate</h1>
+          <div className="form-group shadow-textarea mt-4">
+            <textarea onChange={setinputarea} className="form-control z-depth-1" id="exampleFormControlTextarea6" rows="5" placeholder="Enter the Text you want to Translate..."></textarea>
           </div>
-          <div class="form-group" aria-label="Default select example">
-            <select class="form-control" id="sel1" onChange={languagekey}>
+          <div className="form-group" aria-label="Default select example">
+            <select className="form-control" id="sel1" onChange={languagekey}>
               <option value="none" selected>Select Translating Language</option>
               {languagelist.map((language) => {
                 return <option value={language.code}>{language.name}</option>
               })}
             </select>
           </div>
-          <div class="form-group shadow-textarea mt-4">
-            <textarea disabled class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="5" placeholder="Translated Text will show Here..." value={resulttxt}></textarea>
+          <div className="form-group shadow-textarea mt-4">
+            <textarea disabled className="form-control z-depth-1" id="exampleFormControlTextarea6" rows="5" placeholder="Translated Text will show Here..." value={resulttxt}></textarea>
           </div>
           <button onClick={translatetext} className="btn btn-primary">Translate</button>
         </div>
